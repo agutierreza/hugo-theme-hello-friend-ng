@@ -1,0 +1,6 @@
+{{ $page := site.GetPage (printf "custom-block.%s" .Lang) }}
+{{ with $page }}
+<div class="custom-block align-{{ .Site.Params.customBlockAlignment | default "center" }}">
+    {{ .Content }}
+</div>
+{{ end }}

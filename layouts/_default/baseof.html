@@ -13,8 +13,9 @@
 
             <div class="content">
                 {{ block "main" . }}{{ end }}
-            </div>
-
+                {{ partial "custom-block.html" . }}
+            </div>       
+            
             {{ block "footer" . }}
                 {{ partial "footer.html" . }}
             {{ end }}
