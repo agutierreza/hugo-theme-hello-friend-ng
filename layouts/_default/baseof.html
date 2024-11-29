@@ -13,7 +13,9 @@
 
             <div class="content">
                 {{ block "main" . }}{{ end }}
-                {{ partial "custom-block.html" . }}
+                {{ if .IsHome }}
+                    {{ partial "custom-block.html" . }}
+                {{ end }}
             </div>       
             
             {{ block "footer" . }}
