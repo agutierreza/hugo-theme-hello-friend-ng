@@ -10,7 +10,11 @@
     
         <div class="container">
             {{ partial "header.html" . }}
-
+            {{ if .IsHome }}
+                <div class="home-image">
+                    <img src="/images/profile.jpg" alt="Home Image">
+                </div>
+            {{ end }}
             <div class="content">
                 {{ block "main" . }}{{ end }}
                 {{ if .IsHome }}
